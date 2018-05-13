@@ -33,6 +33,7 @@ a.button {
 }
 
 .resourceinput {
+  padding: 8px 0;
   display: inline-block;
   margin-left: 0.5em;
   margin-right: 0.5em;
@@ -41,7 +42,7 @@ a.button {
 .leftcolumn {
   float: left;
   width: 36em;
-  background-color: #dddddd;
+  background-color: #444;
   padding: 5px;
   border-radius: 3px;
   text-align: center;
@@ -62,7 +63,7 @@ a.button {
 }
 
 .settings {
-  background-color: #dddddd;
+  background-color: #444;
   padding: 1em;
   border-radius: 3px;
 }
@@ -84,7 +85,7 @@ a.button {
 }
 
 .result {
-  background-color: #eeeeee;
+  background-color: #444;
   margin-top: 10px;
   padding: 5px;
   border-radius: 3px;
@@ -92,7 +93,7 @@ a.button {
 
 .goal > .goal {
   padding: 0.5em;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #eee;
   margin-left: 2em;
   position: relative;
 }
@@ -103,7 +104,7 @@ a.button {
   margin-right: 0.5em;
   margin-left: -0.5em;
   width: 1em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
   position: relative;
   z-index: 2;
 }
@@ -114,7 +115,7 @@ a.button {
   position: absolute;
   width: 5px;
   height: 10000px;
-  background: white;
+  background: #222;
   top: 27px;
   left: -3px;
 }
@@ -126,7 +127,7 @@ a.button {
 
 .goals > .goal {
   margin-bottom: 1em;
-  background: #fff;
+  background: #222;
   padding: 0.5em;
   border-radius: 3px;
   overflow: hidden;
@@ -153,4 +154,20 @@ a.button {
 
 .sharedpercent {
   color: #80aaff;
+}
+
+html {
+  background-color: #222;
+  color: #eee;
+}
+
+input {
+  background-color: #444;
+  border: none;
+  box-shadow: 0 0 3px 1px #222;
+  color: #eee;
+}
+
+input.count {
+  margin: 4px;
 }
