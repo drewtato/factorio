@@ -1,3 +1,9 @@
+:root {
+  --bg-color: #141516;
+  --fg-color: #252525;
+  --line-color: #ff8400;
+}
+
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -42,7 +48,7 @@ a.button {
 .leftcolumn {
   float: left;
   width: 36em;
-  background-color: #444;
+  background-color: var(--fg-color);
   padding: 5px;
   border-radius: 3px;
   text-align: center;
@@ -63,7 +69,7 @@ a.button {
 }
 
 .settings {
-  background-color: #444;
+  background-color: var(--fg-color);
   padding: 1em;
   border-radius: 3px;
 }
@@ -85,7 +91,7 @@ a.button {
 }
 
 .result {
-  background-color: #444;
+  background-color: var(--bg-color);
   margin-top: 10px;
   padding: 5px;
   border-radius: 3px;
@@ -93,7 +99,7 @@ a.button {
 
 .goal > .goal {
   padding: 0.5em;
-  border-left: 1px solid #eee;
+  border-left: 1px solid var(--line-color);
   margin-left: 2em;
   position: relative;
 }
@@ -104,7 +110,7 @@ a.button {
   margin-right: 0.5em;
   margin-left: -0.5em;
   width: 1em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--line-color);
   position: relative;
   z-index: 2;
 }
@@ -115,7 +121,7 @@ a.button {
   position: absolute;
   width: 5px;
   height: 10000px;
-  background: #222;
+  background: var(--fg-color);
   top: 27px;
   left: -3px;
 }
@@ -127,7 +133,7 @@ a.button {
 
 .goals > .goal {
   margin-bottom: 1em;
-  background: #222;
+  background: var(--fg-color);
   padding: 0.5em;
   border-radius: 3px;
   overflow: hidden;
@@ -157,14 +163,14 @@ a.button {
 }
 
 html {
-  background-color: #222;
+  background-color: var(--bg-color);
   color: #eee;
 }
 
 input {
-  background-color: #444;
+  background-color: var(--bg-color);
   border: none;
-  box-shadow: 0 0 3px 1px #222;
+  box-shadow: 0 0 3px 1px var(--bg-color);
   color: #eee;
 }
 
