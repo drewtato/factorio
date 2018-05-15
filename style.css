@@ -214,3 +214,7 @@ input[type=radio] {
 :focus:not([type=checkbox]):not([type=radio]) {
   outline: #ff7f00 auto 5px;
 }
+
+img[title=Coal] {
+  filter: drop-shadow(0 0 2.5px hsla(32, 80%, 50%, 0.8));
+}
