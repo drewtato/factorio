@@ -210,3 +210,7 @@ input[type=radio] {
 .leftcolumn, .goals>.goal, .settings {
   box-shadow: 0 0 5px 4px #000;
 }
+
+:focus:not([type=checkbox]):not([type=radio]) {
+  outline: #ff7f00 auto 5px;
+}
