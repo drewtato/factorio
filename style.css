@@ -1,7 +1,9 @@
 :root {
   --bg-color: #141516;
   --fg-color: #252525;
+  --box-color: #333;
   --line-color: #ff8400;
+  --input-color: #000;
 }
 
 body {
@@ -39,15 +41,21 @@ a.button {
 }
 
 .resourceinput {
-  padding: 8px 0;
-  display: inline-block;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  padding: 5px;
+  margin: 5px;
+  display: inline-flex;
+  box-shadow: 0 0 3px 3px var(--bg-color);
+  border-radius: 5px;
+  flex-wrap: wrap;
+  width: 4em;
+  justify-content: space-evenly;
+  align-items: center;
+  background: var(--box-color);
 }
 
 .leftcolumn {
   float: left;
-  width: 36em;
+  width: calc(100% - 60em - 20px);
   background-color: var(--fg-color);
   padding: 5px;
   border-radius: 3px;
@@ -56,7 +64,7 @@ a.button {
 
 .rightcolumn {
   float: right;
-  width: calc(100% - 36em - 20px);
+  width: 60em;
   margin: 0px;
   padding: 0px;
 }
@@ -167,18 +175,38 @@ a.button {
   margin-top: 0.2em;
   margin-bottom: 0;
 }
+
 html {
   background-color: var(--bg-color);
   color: #eee;
 }
 
-input {
-  background-color: var(--bg-color);
+input[type=text] {
+  order: 2;
+  background-color: var(--input-color);
   border: none;
-  box-shadow: 0 0 3px 1px var(--bg-color);
+  border-radius: 5px;
   color: #eee;
+  padding: 3px 5px;
+  margin: 4px;
+  width: 2em;
+  flex-basis: 100%;
 }
 
-input.count {
-  margin: 4px;
+.resourceinput a {
+  order: 1;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+  filter: invert(100%) contrast(180%);
+}
+
+input[type=radio] {
+  transform: scale(1.5);
+  filter: invert(100%) contrast(400%);
+}
+
+.leftcolumn, .goals>.goal, .settings {
+  box-shadow: 0 0 5px 4px #000;
 }
