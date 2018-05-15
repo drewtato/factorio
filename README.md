@@ -1,14 +1,14 @@
 # Factorio Planner
 
+Factorio Planner helps you plan your factories by computing how many
+resources and machines you need to produce a given throughput of
+resources. Try it here: http://doomeer.com/factorio
+
 ## Material Fork
 
 I didn't like getting blinded by the site so I made this for use locally. I switched up the CSS a lot, and added a favicon (the grey gear). I don't know enough about OCaml to make more at the moment, but I'd like to make each resource's box's background change when checked or nonzero so it's easier to see which ones you're actually dealing with.
 
 I don't really intend to make a pull request unless I can make these things togglable. Gonna dive into OCaml now, see ya on the other side :)
-
-Factorio Planner helps you plan your factories by computing how many
-resources and machines you need to produce a given throughput of
-resources. Try it here: http://doomeer.com/factorio
 
 ## Architecture
 
