@@ -45,12 +45,13 @@ a.button {
   margin: 5px;
   box-shadow: 0 0 3px 3px var(--bg-color);
   border-radius: 5px;
-  width: 4em;
+  width: min-content;
   background: var(--box-color);
   display: inline-grid;
-  grid-template-areas: "check icon" "amount amount";
+  grid: "icon icon" 23px "check amount";
   justify-items: center;
-  align-items: center;
+  align-items: top;
+  z-index: 1;
 }
 
 .main {
@@ -158,11 +159,6 @@ a.button {
   width: 2em;
 }
 
-.icon {
-  vertical-align: middle;
-  width: 32px;
-}
-
 .warning {
   color: red;
 }
@@ -188,20 +184,23 @@ input[type=text] {
   border: none;
   border-radius: 5px;
   color: #eee;
-  padding: 3px 5px;
-  margin: 4px;
-  width: 4em;
+  padding: 1px 2px;
+  margin: 1px;
+  width: 1.5em;
   grid-area: amount;
+  z-index: 3;
 }
 
 .resourceinput a {
   grid-area: icon;
+  z-index: 2;
 }
 
 input[type=checkbox] {
   transform: scale(1.5);
   filter: invert(100%) contrast(180%);
   grid-area: check;
+  z-index: 3;
 }
 
 input[type=radio] {
