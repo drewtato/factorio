@@ -56,11 +56,12 @@ a.button {
 .main {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .leftcolumn {
-  width: 200px;
-  flex-grow: 1;
+  flex-grow: 2;
+  width: 352px;
   background-color: var(--fg-color);
   padding: 5px;
   border-radius: 3px;
@@ -71,17 +72,10 @@ a.button {
 }
 
 .rightcolumn {
-  width: 400px;
   flex-grow: 1;
+  width: 600px;
   margin: 5px;
   padding: 0px;
-}
-
-@media (max-width: 72em) {
-  .leftcolumn, .rightcolumn {
-    float: unset;
-    width: unset;
-  }
 }
 
 .settings {
