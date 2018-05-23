@@ -1,5 +1,5 @@
 :root {
-  --bg: #161616 url("https://factorio.com/staticimg/stressed_linen_texture.png");
+  --bg: #161616 url(img/concrete.png);
   --panel-bg: #313031;
   --frame-bg: #242324;
   --title-color: #ffe6c0;
