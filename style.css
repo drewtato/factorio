@@ -24,7 +24,7 @@ body {
 }
 
 input:not([type=radio]) {
-  box-shadow: 0 0 10px 2px var(--blur-color);
+  box-shadow: 0 0 8px 1px var(--blur-color);
 }
 
 button, .button .button {
@@ -33,6 +33,7 @@ button, .button .button {
 
 input:active, input:focus, input:hover, button:hover, button:active {
   --blur-color: var(--factorio-orange);
+  outline: none;
 }
 
 p {
@@ -65,8 +66,18 @@ img {
   margin: 15px;
   border-image: url('img/PanelBorder.png') 
     8 fill / 8px / 8px repeat;
-  padding: 14px;
+  padding: 8px;
   box-shadow: 0 0 10px 10px #000;
+}
+
+.leftcolumn::after, .rightcolumn>.result::after {
+  content: '';
+  display: block;
+  background-image: url(img/handle.png);
+  background-size: 8px 48px;
+  width: 100%;
+  height: 48px;
+  margin-top: 16px;
 }
 
 p.button {
@@ -200,10 +211,24 @@ input[type=radio]:checked {
   font-weight: 700;
   padding: 12px 0 8px;
   margin: 0;
+  display: grid;
+  grid-template-columns: minmax(280px, min-content) auto;
+}
+
+.resourcecategory:first-child::after, .outputh1:first-child::after {
+  content: '';
+  background-image: url(img/handle.png);
+  background-size: 8px 30px;
+  width: 100%;
+  height: 30px;
 }
 
 .resourcecategory:first-child, .outputh1:first-child {
   padding-top: 0px;
+}
+
+.outputh1 {
+  padding-bottom: 20px;
 }
 
 .resourceinput {
