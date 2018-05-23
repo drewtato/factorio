@@ -64,8 +64,9 @@ img {
   background: var(--panel-bg);
   margin: 15px;
   border-image: url('img/PanelBorder.png') 
-    15 fill / 15px / 15px repeat;
+    8 fill / 8px / 8px repeat;
   padding: 14px;
+  box-shadow: 0 0 10px 10px #000;
 }
 
 p.button {
@@ -335,6 +336,46 @@ img {
 img[title=Coal], img:hover, img:active {
   --shadow-color: var(--factorio-orange);
 }
+
+/* The following is webkit only for now, sorries */
+
+::-webkit-scrollbar {
+  width: 25px;
+  height: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: url(img/scrollbar_top.png), 
+    url(img/scrollbar_bottom.png), 
+    url(img/scrollbar_mid.png);
+  background-position: top, bottom, center;
+  background-repeat: no-repeat, no-repeat, repeat-y;
+}
+
+::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
+  background: #333030;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0 -4px 2px -2px #656565 inset,
+    4px 0 2px -2px #252425 inset,
+    0 6px 3px -3px #000 inset,
+    -4px 0 2px -2px #252425 inset;
+}
+
+::-webkit-scrollbar-corner {
+  box-shadow: 0 4px 2px -2px #656565 inset, 
+    4px 0 2px -2px #252425 inset;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-image: url(img/scrollbar_top_h.png), 
+    url(img/scrollbar_bottom_h.png), 
+    url(img/scrollbar_mid_h.png);
+  background-position: left, right, center;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+}
+
 /* :root {
   --bg-color: #141516;
   --fg-color: #252525;
