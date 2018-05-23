@@ -5,11 +5,11 @@
   --title-color: #ffe6c0;
   --body-color: #fff;
   --input-color: #1d1c1d;
-  --input-bg: url(img/InputBG2.png);
   --infotext-color: #75dafb;
   --disabled-color: #b3b1b3;
-  --orange-color: #ffae00;
-  --blur-color: #503a29;
+  --factorio-orange: #ffae00;
+  --orange-border: 2px solid var(--factorio-orange);
+  --blur-color: #241508;
 }
 
 body {
@@ -17,13 +17,26 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.143;
+  letter-spacing: 0.05ch;
   color: var(--body-color);
   border: 0;
   background: var(--bg);
 }
 
+input:not([type=radio]) {
+  box-shadow: 0 0 10px 2px var(--blur-color);
+}
+
+button, .button .button {
+  box-shadow: 0 0 10px 9px var(--blur-color);
+}
+
+input:active, input:focus, input:hover, button:hover, button:active {
+  --blur-color: var(--factorio-orange);
+}
+
 a {
-  color: var(--title-color);
+  color: var(--factorio-orange);
 }
 
 a:active {
@@ -100,12 +113,12 @@ input {
 }
 
 input[type=text] {
-  background: var(--input-bg);
-  background-size: contain;
-  border-image: url(img/InputBorder.png) 0 12 / 0 12px;
-  border-radius: 20px;
-  height: 35px;
-  padding: 0 10px 5px;
+  background-image: url(img/Input.png);
+  background-size: cover;
+  border: none;
+  border-radius: 7px;
+  height: 30px;
+  padding: 0 0 4px;
   margin: 5px;
   width: 70px;
   box-sizing: border-box;
@@ -114,6 +127,21 @@ input[type=text] {
   font: inherit;
   font-size: 19px;
   font-weight: 700;
+}
+input[type=text]:hover {
+  background-image: url(img/Input_hover.png);
+}
+/*  This does not work because :focus seems to 
+    override it in all cases
+input[type=text]:active {
+  background-image: url(img/Input_active.png);
+  outline: none;
+} */
+input[type=text]:focus {
+  background-image: url(img/Input_focus.png);
+  outline: none;
+  padding-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 input[type=checkbox] {
@@ -159,12 +187,17 @@ input[type=radio]:checked {
   background-image: url(/img/radio_checked.png);
 }
 
-.resourcecategory {
+.resourcecategory, .outputh1 {
   width: 100%;
   color: var(--title-color);
   font-size: 22px;
   font-weight: 700;
-  margin: 12px 0 8px;
+  padding: 12px 0 8px;
+  margin: 0;
+}
+
+.resourcecategory:first-child, .outputh1:first-child {
+  padding-top: 0px;
 }
 
 .resourceinput {
@@ -187,6 +220,10 @@ input[type=radio]:checked {
   border: none;
   color: #fff;
   text-shadow: 
+    -2.5px 0 0 #000,
+    2.5px 0 0 #000,
+    0 -2.5px 0 #000,
+    0 2.5px 0 #000,
     -2px -2px 0 #000,  
     2px -2px 0 #000,
     -2px 2px 0 #000,
@@ -199,6 +236,7 @@ input[type=radio]:checked {
   text-align: end;
   width: 100%;
   height: initial;
+  box-shadow: none;
 }
 
 .resourceinput input[type=checkbox] {
@@ -243,16 +281,54 @@ input[type=radio]:checked {
   margin-top: 30px;
 }
 
-.goal {
+.goals>.goal {
   border-image: url('/img/SectionBorder.png') 
     8 fill / 8px / 8px repeat;
-  min-width: 62px;
-  min-height: 62px;
-  margin: 16px; 
+    margin: 0 0 24px 8px;
+    padding: 6px;
 }
 
-img[title=Coal] {
-  filter: drop-shadow(0 0 2.5px var(--orange-color));
+.goal {
+  margin-left: 16px;
+  padding: 8px 0 8px 16px;
+}
+
+.goal>.goal {
+  border-left: var(--orange-border);
+  position: relative;
+}
+.goal>.goal:last-of-type:after {
+  content:"";
+  position: absolute;
+  display: block;
+  top: 28px;
+  left: -3px;
+  width: 3px;
+  height: calc(100% - 20px);
+  background-color: var(--panel-bg);
+}
+
+.goal>.goal:before {
+  content: " ";
+  display: inline-block;
+  margin-right: 4px;
+  margin-left: -16px;
+  width: 16px;
+  border-bottom: var(--orange-border);
+  position: relative;
+}
+
+.goal>.goal:first-of-type {
+  margin-top: 4px;
+}
+
+
+img {
+  filter: drop-shadow(0 0 3px var(--shadow-color, #111));
+}
+
+img[title=Coal], img:hover, img:active {
+  --shadow-color: var(--factorio-orange);
 }
 /* :root {
   --bg-color: #141516;
