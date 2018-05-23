@@ -1,4 +1,78 @@
 :root {
+  --bg: #161616 url("https://factorio.com/static/img/stressed_linen_texture.png");
+  --panel-bg: #313031;
+  --frame-bg: #242324;
+  --title-color: #ffe6c0;
+  --body-color: #fff;
+  --input-color: #1d1c1d;
+  --infotext-color: #75dafb;
+  --disabled-color: #b3b1b3;
+  --orange-color: #ffae00;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.143;
+  color: var(--body-color);
+  border: 0;
+  background: var(--bg);
+}
+
+.main {
+  display: flex;
+  align-items: flex-start;
+}
+
+.leftcolumn, .rightcolumn>* {
+  background: var(--panel-bg);
+  margin: 15px;
+  border: 15px solid transparent;
+  border-image: url('/img/PanelBorder.png') 
+    15 fill / 15px / 15px repeat;
+}
+
+.leftcolumn {
+  flex-grow: 2;
+  width: 352px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resource_category {
+  width: 100%;
+}
+
+.resourceinput {
+  margin: 9px;
+  border: 9px solid transparent;
+  border-image: url('/img/VirtualItemBorder.png') 
+    9 fill / 9px / 9px repeat;
+}
+
+input[type=text] {
+  width: 3em;
+}
+
+.rightcolumn {
+  flex-grow: 1;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.goal {
+  margin: 20px;
+  border: 8px solid transparent;
+  border-image: url('/img/SectionBorder.png') 
+    8 fill / 8px / 8px repeat;
+}
+
+img[title=Coal] {
+  filter: drop-shadow(0 0 2.5px var(--orange-color));
+}
+/* :root {
   --bg-color: #141516;
   --fg-color: #252525;
   --box-color: #333;
@@ -215,8 +289,4 @@ input[type=radio] {
 
 :focus:not([type=checkbox]):not([type=radio]) {
   outline: #ff7f00 auto 5px;
-}
-
-img[title=Coal] {
-  filter: drop-shadow(0 0 2.5px hsla(32, 80%, 50%, 0.8));
-}
+} */
