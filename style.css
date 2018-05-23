@@ -23,10 +23,6 @@ body {
   background: var(--bg);
 }
 
-input:not([type=radio]) {
-  box-shadow: 0 0 8px 1px var(--blur-color);
-}
-
 button, .button .button {
   box-shadow: 0 0 10px 9px var(--blur-color);
 }
@@ -54,6 +50,11 @@ a:visited {
 
 img {
   vertical-align: middle;
+  filter: drop-shadow(0 0 3px var(--shadow-color, #111));
+}
+
+img[title=Coal], img:hover, img:active img:focus {
+  --shadow-color: var(--factorio-orange);
 }
 
 .main {
@@ -128,6 +129,10 @@ input {
   vertical-align: middle;
 }
 
+input {
+  box-shadow: 0 0 8px 1px var(--blur-color);
+}
+
 input[type=text] {
   background-color: transparent;
   background-image: url(img/Input.png);
@@ -185,12 +190,16 @@ input[type=checkbox]:checked:hover {
 input[type=checkbox]:checked:active {
   background-image: url(img/checkbox_checked_press.png);
 }
+
 input[type=radio] {
+  box-shadow: 0 0 8px 1px var(--blur-color), 
+    0 0 3px 0 var(--blur-color) inset;
+  border-radius: 50%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  height: 28px;
-  width: 28px;
+  height: 22px;
+  width: 22px;
   background-size: cover;
   background-image: url(img/radio.png);
 }
@@ -315,7 +324,7 @@ input[type=radio]:checked {
 .goals>.goal {
   border-image: url('img/SectionBorder.png') 
     8 fill / 8px / 8px repeat;
-    margin: 0 0 24px 8px;
+    margin: 0 8px 24px;
     padding: 6px;
 }
 
@@ -354,15 +363,7 @@ input[type=radio]:checked {
 }
 
 
-img {
-  filter: drop-shadow(0 0 3px var(--shadow-color, #111));
-}
-
-img[title=Coal], img:hover, img:active {
-  --shadow-color: var(--factorio-orange);
-}
-
-/* The following is webkit only for now, sorries */
+/* The following is webkit only on for now, sorries */
 
 ::-webkit-scrollbar {
   width: 25px;
