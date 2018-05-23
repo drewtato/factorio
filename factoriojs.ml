@@ -991,7 +991,7 @@ let () =
       ]
     in
     let resource_input_category (name, resources) =
-      p ~class_: "resource_category" [ text name ] ::
+      p ~class_: "resourcecategory" [ text name ] ::
       List.map resource_input resources
     in
     div ~class_: "main" [
