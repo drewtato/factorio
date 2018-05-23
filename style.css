@@ -35,6 +35,10 @@ input:active, input:focus, input:hover, button:hover, button:active {
   --blur-color: var(--factorio-orange);
 }
 
+p {
+  margin: 0 0 8px 0;
+}
+
 a {
   color: var(--factorio-orange);
 }
