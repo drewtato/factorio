@@ -1,5 +1,5 @@
 :root {
-  --bg: #161616 url("https://factorio.com/static/img/stressed_linen_texture.png");
+  --bg: #161616 url("https://factorio.com/staticimg/stressed_linen_texture.png");
   --panel-bg: #313031;
   --frame-bg: #242324;
   --title-color: #ffe6c0;
@@ -63,7 +63,7 @@ img {
 .leftcolumn, .rightcolumn>* {
   background: var(--panel-bg);
   margin: 15px;
-  border-image: url('/img/PanelBorder.png') 
+  border-image: url('img/PanelBorder.png') 
     15 fill / 15px / 15px repeat;
   padding: 14px;
 }
@@ -81,28 +81,28 @@ p.button {
   font-weight: 700;
   font-size: 22px;
   text-align: center;
-  border-image: url('/img/ButtonBorder.png') 
+  border-image: url('img/ButtonBorder.png') 
   7 fill / 7px / 7px repeat;
   border-width: 0;
   padding: 0 20px 3px;
 }
 
 button:hover {
-  border-image-source: url('/img/ButtonBorder_hover.png');
+  border-image-source: url('img/ButtonBorder_hover.png');
 }
 button:active {
-  border-image-source: url('/img/ButtonBorder_press.png');
+  border-image-source: url('img/ButtonBorder_press.png');
   outline: none;
 }
 
 .button .button {
-  border-image-source: url('/img/CancelBorder.png');
+  border-image-source: url('img/CancelBorder.png');
 }
 .button .button:hover {
-  border-image-source: url('/img/CancelBorder_hover.png');
+  border-image-source: url('img/CancelBorder_hover.png');
 }
 .button .button:active {
-  border-image-source: url('/img/CancelBorder_press.png');
+  border-image-source: url('img/CancelBorder_press.png');
 }
 
 .leftcolumn {
@@ -155,22 +155,22 @@ input[type=checkbox] {
   height: 20px;
   width: 20px;
   background-size: cover;
-  background-image: url(/img/checkbox.png);
+  background-image: url(img/checkbox.png);
 }
 input[type=checkbox]:hover {
-  background-image: url(/img/checkbox_hover.png);
+  background-image: url(img/checkbox_hover.png);
 }
 input[type=checkbox]:active {
-  background-image: url(/img/checkbox_press.png);
+  background-image: url(img/checkbox_press.png);
 }
 input[type=checkbox]:checked {
-  background-image: url(/img/checkbox_checked.png);
+  background-image: url(img/checkbox_checked.png);
 }
 input[type=checkbox]:checked:hover {
-  background-image: url(/img/checkbox_checked_hover.png);
+  background-image: url(img/checkbox_checked_hover.png);
 }
 input[type=checkbox]:checked:active {
-  background-image: url(/img/checkbox_checked_press.png);
+  background-image: url(img/checkbox_checked_press.png);
 }
 input[type=radio] {
   -webkit-appearance: none;
@@ -179,16 +179,16 @@ input[type=radio] {
   height: 28px;
   width: 28px;
   background-size: cover;
-  background-image: url(/img/radio.png);
+  background-image: url(img/radio.png);
 }
 input[type=radio]:hover {
-  background-image: url(/img/radio_hover.png);
+  background-image: url(img/radio_hover.png);
 }
 input[type=radio]:active {
-  background-image: url(/img/radio_press.png);
+  background-image: url(img/radio_press.png);
 }
 input[type=radio]:checked {
-  background-image: url(/img/radio_checked.png);
+  background-image: url(img/radio_checked.png);
 }
 
 .resourcecategory, .outputh1 {
@@ -206,7 +206,7 @@ input[type=radio]:checked {
 
 .resourceinput {
   margin: 9px;
-  border-image: url('/img/VirtualItemBorder.png') 
+  border-image: url('img/VirtualItemBorder.png') 
     9 fill / 9px / 9px repeat;
   width: 50px;
   height: 50px;
@@ -286,7 +286,7 @@ input[type=radio]:checked {
 }
 
 .goals>.goal {
-  border-image: url('/img/SectionBorder.png') 
+  border-image: url('img/SectionBorder.png') 
     8 fill / 8px / 8px repeat;
     margin: 0 0 24px 8px;
     padding: 6px;
