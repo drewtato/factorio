@@ -15,7 +15,7 @@
 body {
   font-family: 'Titillium Web', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.143;
   color: var(--body-color);
   border: 0;
@@ -51,11 +51,52 @@ img {
   padding: 14px;
 }
 
+p.button {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0 10px;
+}
+.button .button, button {
+  margin: auto;
+  color: #000;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  border-image: url('/img/ButtonBorder.png') 
+  7 fill / 7px / 7px repeat;
+  border-width: 0;
+  padding: 0 20px 3px;
+}
+
+button:hover {
+  border-image-source: url('/img/ButtonBorder_hover.png');
+}
+button:active {
+  border-image-source: url('/img/ButtonBorder_press.png');
+  outline: none;
+}
+
+.button .button {
+  border-image-source: url('/img/CancelBorder.png');
+}
+.button .button:hover {
+  border-image-source: url('/img/CancelBorder_hover.png');
+}
+.button .button:active {
+  border-image-source: url('/img/CancelBorder_press.png');
+}
+
 .leftcolumn {
   flex-grow: 2;
   width: 352px;
   display: flex;
   flex-wrap: wrap;
+}
+
+input {
+  vertical-align: middle;
 }
 
 input[type=text] {
@@ -64,14 +105,14 @@ input[type=text] {
   border-image: url(img/InputBorder.png) 0 12 / 0 12px;
   border-radius: 20px;
   height: 35px;
-  padding: 0 10px;
+  padding: 0 10px 5px;
   margin: 5px;
   width: 70px;
   box-sizing: border-box;
   text-align: center;
   color: var(--input-color);
   font: inherit;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
 }
 
@@ -82,7 +123,6 @@ input[type=checkbox] {
   height: 20px;
   width: 20px;
   background-size: cover;
-  vertical-align: middle;
   background-image: url(/img/checkbox.png);
 }
 input[type=checkbox]:hover {
@@ -100,29 +140,48 @@ input[type=checkbox]:checked:hover {
 input[type=checkbox]:checked:active {
   background-image: url(/img/checkbox_checked_press.png);
 }
+input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 28px;
+  width: 28px;
+  background-size: cover;
+  background-image: url(/img/radio.png);
+}
+input[type=radio]:hover {
+  background-image: url(/img/radio_hover.png);
+}
+input[type=radio]:active {
+  background-image: url(/img/radio_press.png);
+}
+input[type=radio]:checked {
+  background-image: url(/img/radio_checked.png);
+}
 
 .resourcecategory {
   width: 100%;
   color: var(--title-color);
+  font-size: 22px;
   font-weight: 700;
-  margin: 8px 0;
+  margin: 12px 0 8px;
 }
 
 .resourceinput {
   margin: 9px;
   border-image: url('/img/VirtualItemBorder.png') 
     9 fill / 9px / 9px repeat;
-  width: 62px;
-  height: 62px;
+  width: 50px;
+  height: 50px;
   display: grid;
   grid-template-columns: min-content auto;
   grid-template-rows: auto min-content;
   overflow: hidden;
+  justify-items: end;
 }
 
 .resourceinput input[type=text] {
-  max-width: 3em;
-  grid-area: 2 / 2;
+  grid-area: 2 / 1 / 2 / 3;
   z-index: 2;
   background: none;
   border: none;
@@ -143,7 +202,7 @@ input[type=checkbox]:checked:active {
 }
 
 .resourceinput input[type=checkbox] {
-  grid-area: 2 / 1;
+  grid-area: 1 / 2;
   z-index: 3;
   margin: 0;
 }
@@ -154,8 +213,8 @@ input[type=checkbox]:checked:active {
 }
 
 .resourceinput img {
-  width: 62px;
-  height: 62px;
+  width: 50px;
+  height: 50px;
 }
 
 .rightcolumn {
@@ -163,6 +222,25 @@ input[type=checkbox]:checked:active {
   width: 600px;
   display: flex;
   flex-direction: column;
+}
+
+.rightcolumn input[type=checkbox], .rightcolumn input[type=radio] {
+  margin: 0 4px 4px 10px;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.settings>div {
+  align-self: flex-start;
+  margin: 7px 0;
+}
+
+.settings>div:first-of-type {
+  margin-top: 30px;
 }
 
 .goal {
