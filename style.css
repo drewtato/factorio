@@ -8,6 +8,7 @@
   --infotext-color: #75dafb;
   --disabled-color: #b3b1b3;
   --factorio-orange: #ffae00;
+  --cancel-red: #fe4d4d;
   --orange-border: 2px solid var(--factorio-orange);
   --blur-color: #241508;
 }
@@ -21,15 +22,6 @@ body {
   color: var(--body-color);
   border: 0;
   background: var(--bg);
-}
-
-button, .button .button {
-  box-shadow: 0 0 10px 9px var(--blur-color);
-}
-
-input:active, input:focus, input:hover, button:hover, button:active {
-  --blur-color: var(--factorio-orange);
-  outline: none;
 }
 
 p {
@@ -60,6 +52,7 @@ img[title=Coal], img:hover, img:active img:focus {
 .main {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .leftcolumn, .rightcolumn>* {
@@ -86,7 +79,9 @@ p.button {
   text-align: center;
   margin: 40px 0 10px;
 }
-.button .button, button {
+
+button, .button .button {
+  box-shadow: 0 0 10px 9px var(--blur-color);
   margin: auto;
   color: #000;
   text-decoration: none;
@@ -100,7 +95,12 @@ p.button {
   padding: 0 20px 3px;
 }
 
-button:hover {
+button:active, .button .button:active {
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+button:hover, button:focus {
   border-image-source: url('img/ButtonBorder_hover.png');
 }
 button:active {
@@ -111,8 +111,9 @@ button:active {
 .button .button {
   border-image-source: url('img/CancelBorder.png');
 }
-.button .button:hover {
+.button .button:hover:not(:active) {
   border-image-source: url('img/CancelBorder_hover.png');
+  --blur-color: var(--cancel-red);
 }
 .button .button:active {
   border-image-source: url('img/CancelBorder_press.png');
@@ -127,10 +128,12 @@ button:active {
 
 input {
   vertical-align: middle;
+  box-shadow: 0 0 8px 1px var(--blur-color);
 }
 
-input {
-  box-shadow: 0 0 8px 1px var(--blur-color);
+input:active, input:focus, input:hover, input:checked, button:hover:not(:active) {
+  --blur-color: var(--factorio-orange);
+  outline: none;
 }
 
 input[type=text] {
@@ -153,8 +156,8 @@ input[type=text] {
 input[type=text]:hover {
   background-image: url(img/Input_hover.png);
 }
-/*  This does not work because :focus seems to 
-    override it in all cases
+/*  This does not have any effect because :focus
+     seems to override it in all cases
 input[type=text]:active {
   background-image: url(img/Input_active.png);
   outline: none;
@@ -244,8 +247,8 @@ input[type=radio]:checked {
   margin: 9px;
   border-image: url('img/VirtualItemBorder.png') 
     9 fill / 9px / 9px repeat;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: grid;
   grid-template-columns: min-content auto;
   grid-template-rows: auto min-content;
@@ -283,6 +286,7 @@ input[type=radio]:checked {
   grid-area: 1 / 2;
   z-index: 3;
   margin: 0;
+  transform: scale(0.8);
 }
 
 .resourceinput a {
@@ -291,8 +295,8 @@ input[type=radio]:checked {
 }
 
 .resourceinput img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .rightcolumn {
