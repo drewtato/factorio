@@ -6,7 +6,7 @@ resources. Try it here: http://doomeer.com/factorio
 
 ## Material Fork
 
-I didn't like getting blinded by the site so I made this for use locally. I switched up the CSS a lot, and added a favicon (the grey gear). I don't know enough about OCaml to make more at the moment, but I'd like to make each resource's box's background change when checked or nonzero so it's easier to see which ones you're actually dealing with.
+I didn't like getting blinded by the site so I made this for use locally. I took the design from [FFF #243](https://www.factorio.com/blog/post/fff-243) and turned it into CSS (yay!), and added a favicon (the grey gear). I don't know enough about OCaml to make more at the moment, but I'd like to make each resource's box's background change when checked or nonzero so it's easier to see which ones you're actually dealing with, as well as make the theme togglable.
 
 I don't really intend to make a pull request unless I can make these things togglable. Gonna dive into OCaml now, see ya on the other side :)
 
