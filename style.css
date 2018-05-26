@@ -223,6 +223,9 @@ input[type=radio]:checked {
   font-weight: 700;
   padding: 12px 0 8px;
   margin: 0;
+}
+
+.resourcecategory:first-child, .outputh1:first-child {
   display: grid;
   grid-template-columns: minmax(280px, min-content) auto;
 }
