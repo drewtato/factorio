@@ -21,7 +21,7 @@ body {
   letter-spacing: 0.05ch;
   color: var(--body-color);
   border: 0;
-  background-image: var(--bg);
+  background: var(--bg);
 }
 
 p {
@@ -89,8 +89,8 @@ button, .button .button {
   font-weight: 700;
   font-size: 22px;
   text-align: center;
-  border-image: url('img/ButtonBorder.png') 
-  7 fill / 7px / 7px repeat;
+  border-image: url('img/ButtonBorder.png')
+    7 fill / 7px / 7px repeat;
   border-width: 0;
   padding: 0 20px 3px;
 }
