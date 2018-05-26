@@ -280,7 +280,7 @@ input[type=radio]:checked {
   appearance: none;
   margin: 0;
   padding: 0;
-  text-align: right;
+  text-align: right ;
   width: 100%;
   height: initial;
   box-shadow: none;
