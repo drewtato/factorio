@@ -59,7 +59,7 @@ img[title=Coal], img:hover, img:active img:focus {
   background: var(--panel-bg);
   margin: 15px;
   border-image: url('img/PanelBorder.png') 
-    8 / 8px / 8px repeat;
+    8 fill / 8px / 8px repeat;
   padding: 8px;
   box-shadow: 0 0 10px 10px #000;
 }
