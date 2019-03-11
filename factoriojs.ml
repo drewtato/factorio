@@ -69,8 +69,8 @@ let special_icons =
   let list =
     [
       power_armor_mk2.name, "Power_armor_MK2";
-      battery_mk1.name, "Battery-equipment";
-      battery_mk2.name, "Battery_MK2";
+      personal_battery.name, "Battery-equipment";
+      personal_battery_mk2.name, "Battery_MK2";
       energy_shield_mk2.name, "Energy_shield_MK2";
     ]
   in
@@ -82,8 +82,8 @@ let special_hrefs =
   let list =
     [
       power_armor_mk2.name, "Power_armor_MK2";
-      battery_mk1.name, "Battery_MK1";
-      battery_mk2.name, "Battery_MK2";
+      personal_battery.name, "Battery_MK1";
+      personal_battery_mk2.name, "Battery_MK2";
       energy_shield_mk2.name, "Energy_shield_MK2";
     ]
   in
@@ -866,12 +866,7 @@ let () =
               [
                 div ~class_: "outputh1" [ text "Current Version" ];
                 p [
-                  text
-                    "Check out the new solid fuel settings added by \
-                     DeCristoforis in Advanced Settings! \
-                     I also split recipes into categories. ";
-                  a ~href: "https://github.com/doomeer/factorio/issues/51"
-                    [ text "Discuss it on GitHub." ];
+                  text "Recipes were updated for version 0.17!";
                 ];
                 div ~class_: "outputh1" [ text "Getting Started" ];
                 p_text
@@ -944,6 +939,9 @@ let () =
                      Thanks to Iidebyo for patching several wrong recipes! \
                      Thanks to JuicyJuuce for even more recipes! \
                      Thanks to DeCristoforis for the Solid Fuel setting! \
+                     Thanks to Saintis for the science pack category! \
+                     Thanks to Lava84flow, SamuelWr, keeshoekzema and s3bash for \
+                     the 0.17 recipes! \
                      And thanks to everyone who helped finding bugs \
                      or posted suggestions. This tool greatly improved \
                      thanks to you.";
