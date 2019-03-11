@@ -216,7 +216,7 @@ input[type=radio]:checked {
   background-image: url(img/radio_checked.png);
 }
 
-.resourcecategory, .outputh1 {
+.resource_category, .outputh1 {
   width: 100%;
   color: var(--title-color);
   font-size: 22px;
@@ -225,12 +225,12 @@ input[type=radio]:checked {
   margin: 0;
 }
 
-.resourcecategory:first-child, .outputh1:first-child {
+.resource_category:first-child, .outputh1:first-child {
   display: grid;
   grid-template-columns: minmax(280px, min-content) auto;
 }
 
-.resourcecategory:first-child::after, .outputh1:first-child::after {
+.resource_category:first-child::after, .outputh1:first-child::after {
   content: '';
   background-image: url(img/handle.png);
   background-size: 8px 30px;
@@ -238,7 +238,7 @@ input[type=radio]:checked {
   height: 30px;
 }
 
-.resourcecategory:first-child, .outputh1:first-child {
+.resource_category:first-child, .outputh1:first-child {
   padding-top: 0px;
 }
 
